@@ -41,6 +41,7 @@ public class JdbcController {
             student = template.queryForObject(sql, new BeanPropertyRowMapper<Student>(Student.class));
         }catch (Exception e){
             System.out.println("执行失败");
+            System.out.println("被追踪过");
         }
         return student;
     }
